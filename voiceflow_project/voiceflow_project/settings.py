@@ -90,6 +90,7 @@ DATABASES = {
 }
 
 CORS_ALLOWED_ORIGINS = [
+    "*",
     "https://qrtddubai.wixsite.com/website/",
 ]
 # Password validation
