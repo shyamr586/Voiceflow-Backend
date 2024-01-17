@@ -92,7 +92,7 @@ DATABASES = {
 CORS_ALLOWED_ORIGINS = [
     "*",
     "https://qrtddubai.wixsite.com/website/",
-    "https://46e5b33f-9f49-428e-904a-8cc165e9c004.dev.wix-code.com",
+    #"https://46e5b33f-9f49-428e-904a-8cc165e9c004.dev.wix-code.com",
 ]
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
