@@ -90,7 +90,7 @@ DATABASES = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "https://qrtddubai.wixsite.com/website/voiceflow-test",
+    "https://qrtddubai.wixsite.com/website/",
 ]
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
