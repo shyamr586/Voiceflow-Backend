@@ -10,7 +10,6 @@ class StartConversationView(APIView):
         user_id = request.data.get("user_id", "")
         url = f"https://general-runtime.voiceflow.com/state/user/{user_id}/interact"
         response = requests.post(url, headers={"Authorization": settings.VOICEFLOW_API_KEY})
-        response['Access-Control-Allow-Origin'] = '*'
 
         # Save the conversation history (optional)
         serializer = ConversationSerializer(data={"user_id": user_id, "output_text": response.text})
@@ -27,7 +26,6 @@ class SendUserInputView(APIView):
         url = f"https://general-runtime.voiceflow.com/state/user/{user_id}/interact"
         body = {"action": {"type": "text", "payload": user_input}}
         response = requests.post(url, json=body, headers={"Authorization": settings.VOICEFLOW_API_KEY})
-        response['Access-Control-Allow-Origin'] = '*'
 
         # Save the conversation history (optional)
         serializer = ConversationSerializer(data={"user_id": user_id, "input_text": user_input, "output_text": response.text})
